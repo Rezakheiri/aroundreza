@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">around</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_map">نمایش در نقشه</string>
+</resources>
