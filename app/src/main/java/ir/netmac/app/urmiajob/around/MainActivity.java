@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnmaps;
 
     //private GPSTracker gps;
-    private double latitude;
+    private double  Rezalatitude;
     private double longitude;
     private String url_around;
     private List<HashMap<String, Object>> all_around = new ArrayList<>();
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        url_around = "http://www.orumcity.ir/urombist/new_get_data_around.php?lnx=" + latitude + "&lny=" + longitude + "&page=";
+        url_around = "http://www.orumcity.ir/urombist/new_get_data_around.php?lnx=" + Rezalatitude+ "&lny=" + longitude + "&page=";
         Log.i("Log1", "" + url_around);
 
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickMap(View v) {
         Intent i = new Intent(getApplicationContext(), MapsActivity.class);
         i.putExtra("url", url_around);
-        i.putExtra("lnx", "" + latitude);
+        i.putExtra("lnx", "" + Rezalatitude);
         i.putExtra("lny", "" + longitude);
         startActivity(i);
     }
